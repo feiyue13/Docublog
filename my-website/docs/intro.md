@@ -1,47 +1,40 @@
 ---
+sidebar_label: '介绍'
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+##  BI平台简介
 
-Let's discover **Docusaurus in less than 5 minutes**.
+> 本平台是基于Superset开发部署的。**Apache Superset** 是一款由Airbnb开源的、目前由Apache孵化的,基于**Flask-appbuilder**搭建的“现代化企业级BI（商业智能）Web应用程序”。  
+他能让所有用户都可以轻松使用图表工具，用于探索和可视化其数据的集合，从简单的饼图到高度详细的地理空间图表应有尽有。
+>> 它主要通过创建和分享dashboard，为数据分析提供了轻量级的数据查询和可视化方案。
 
-## Getting Started
+## 特点 ##
+** 本平台是基于superset进行的二次开发，它拥有如下的特点：**
 
-Get started by **creating a new site**.
+1. 直观的界面，用于可视化数据集和制作交互式仪表板
+2. 各种精美的可视化效果来展示您的数据
+3. 用于提取和呈现数据集的无代码可视化构建器
+4. 用于准备可视化数据的世界级 SQL IDE，包括丰富的元数据浏览器
+5. 轻量级语义层，使数据分析人员能够快速定义自定义维度和指标
+6. 对大多数 SQL 数据库的开箱即用支持
+7. 无缝的内存中异步缓存和查询
+8. 一种可扩展的安全模型，允许配置非常复杂的规则，以确定谁可以访问哪些产品功能和数据集。
+9. 与主要身份验证后端（数据库、OpenID、LDAP、OAuth、REMOTE_USER等）集成
+10. 添加自定义可视化插件的能力
+11. 用于编程自定义的 API
+12. 专为扩展而设计的云原生架构
+13. superset是云原生的，旨在实现高可用性。它旨在横向扩展到大型， 分布式环境，在容器内运行良好。虽然您可以轻松试驾 在适度设置或仅在笔记本电脑上超集，横向扩展几乎没有限制。
+## 支持 ##
+** 本平台因是云原生的，具有很高的灵活性，允许您选择： **
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+* Web服务器（Gunicorn，Nginx，Apache），
+* 元数据数据库引擎（MySQL，Postgres，MariaDB等），
+* 消息队列（Redis，RabbitMQ，SQS等），
+* 结果后端（S3，Redis，Memcached等），
+* 缓存层（Memcached，Redis等），
+* 同时本平台还可以与NewRelic，StatsD和DataDog等服务很好地配合使用，并且能够运行。
+* 针对最常用数据库技术的分析工作负载。
 
-### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+** Superset目前在许多公司大规模运行。例如，超集在Airbnb运行 Kubernetes 内部的生产环境，为 600+ 每日活跃用户提供服务，查看超过 100K 图表一天。 ** 

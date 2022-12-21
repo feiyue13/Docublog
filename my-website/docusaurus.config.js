@@ -32,20 +32,32 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
+        // docs:{
+        //   path :"./dcos/intro",
+        //   routeBasePath:"/"
+        // },
+
+
+        blog :{
+          path :"./blog",
+          routeBasePath: "/"
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -57,7 +69,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: '平台操作文档',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -66,10 +78,11 @@ const config = {
           {
             type: 'doc',
             docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            position: 'right',
+            label: '文档',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: 'docs', label: '文档', position: 'right'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',

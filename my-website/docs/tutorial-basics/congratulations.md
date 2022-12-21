@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_positio: 6
 ---
 
 # Congratulations!

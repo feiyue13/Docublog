@@ -1,0 +1,20 @@
+---
+sidebar_label: '缓存'
+sidebar_position: 5
+---
+
+
+SUPERSET 使用缓存进行缓存。配置缓存就像在 Flask 缓存规范中提供自定义缓存配置一样简单。 Flask-Caching 支持各种缓存后端，包括 Redis、Memcached、SimpleCache（内存中）或 本地文件系统。还支持自定义缓存后端。详情请看这里。 可以自定义以下缓存配置：superset_config.py
+
+•	元数据缓存（可选）：CACHE_CONFIG
+•	绘制从数据集查询的数据图表（可选）：DATA_CACHE_CONFIG
+•	SQL 实验室查询结果（可选）：。有关详细信息，请参阅通过芹菜进行异步查询RESULTS_BACKEND
+•	仪表板筛选器状态（必需）：。FILTER_STATE_CACHE_CONFIG
+•	浏览图表表单数据（必填）：EXPLORE_FORM_DATA_CACHE_CONFIG
+
+请注意，需要仪表板和探索缓存。如果未定义这些缓存，则 Superset 将回退到使用存储数据的内置缓存 在元数据数据库中。虽然建议使用专用缓存，但内置缓存也可用于缓存其他数据。 例如，要使用内置缓存来存储图表数据，请使用以下配置：
+DATA_CACHE_CONFIG = {
+    "CACHE_TYPE": "SupersetMetastoreCache",
+    "CACHE_KEY_PREFIX": "superset_results",  # make sure this string is unique to avoid collisions
+    "CACHE_DEFAULT_TIMEOUT": 86400,  # 60 seconds * 60 minutes * 24 hours
+}
